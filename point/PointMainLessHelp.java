@@ -2,6 +2,7 @@
 // Fifth version, to accompany immutable Point class.
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.awt.*;
 
 
 public class PointMainLessHelp {
@@ -18,6 +19,9 @@ public class PointMainLessHelp {
         Point p3 = new Point(11,2);
         
         Scanner input = new Scanner(System.in);
+        DrawingPanel panel  = new DrawingPanel(1000,1000);
+        Graphics pen = panel.getGraphics();
+        
         
         System.out.println("how many new points do you want to add");
         npoints = input.nextInt();

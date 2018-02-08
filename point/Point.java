@@ -1,4 +1,4 @@
-// A Point object represents a pair of (x, y) coordinates.
+ // A Point object represents a pair of (x, y) coordinates.
 // Seventh version: Immutable.
 // Class invariant: x >= 0 && y >= 0.
 
