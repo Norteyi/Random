@@ -1,12 +1,36 @@
 // A program that deals with 2D points.
 // Fifth version, to accompany immutable Point class.
+import java.util.Scanner;
+import java.util.ArrayList;
+
 
 public class PointMainLessHelp {
     public static void main(String[] args) {
         // create two Point objects
+        
+        int npoints = 0;
+        int pointy;
+        int pointx;
+        ArrayList point = new ArrayList<Point>();
+        
         Point p1 = new Point(0,0);
         Point p2 = new Point(0,0);
         Point p3 = new Point(11,2);
+        
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("how many new points do you want to add");
+        npoints = input.nextInt();
+        for(int x=0; x<npoints; x++){
+            System.out.println("What is the y coordinate");
+            pointy = input.nextInt();
+            System.out.println("What is the x coordinate");
+            pointx = input.nextInt();
+            point.add(new Point(pointx, pointy));
+        }
+        System.out.println(point);
+            
+           
 
         // print each point and its distance from origin
         System.out.println("p1 is " + p1.toString());

@@ -65,7 +65,7 @@ public class Point {
     }
     
     public boolean isCollinear(Point p1, Point p2){
-        if(getSlope(p1) == getSlope(p2)){
+        if(getSlope(p1) == getSlope(p2) && p2.getSlope(p1) == getSlope(p2)){
             System.out.println(getSlope(p1) + " " + getSlope(p2) + "it is collinear");
             return true;
         }
