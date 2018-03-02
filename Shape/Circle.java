@@ -5,7 +5,7 @@ import java.awt.*;
  * @author (your name here)
  * @version (version number or date here)
  */
-public abstract class Circle implements Shape
+public class Circle implements Shape
 {
     private int diameter = 0;
     private int x;

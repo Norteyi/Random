@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Octogram
+comment1.params=px\ py\ pwidth
+comment1.target=Octogram(int,\ int,\ int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Octogram\r\n
+comment2.params=pen
+comment2.target=void\ draw(java.awt.Graphics)
+comment3.params=
+comment3.target=double\ perimeter()
+comment4.params=
+comment4.target=double\ area()
+numComments=5

@@ -5,7 +5,7 @@ import java.awt.*;
  * @author (your name here)
  * @version (version number or date here)
  */
-public abstract class Rectangle
+public class Rectangle implements Shape
 {
     // instance variables - replace the example below with your own
     private int length;

@@ -5,7 +5,7 @@ import java.awt.*;
  * @author (your name here)
  * @version (version number or date here)
  */
-public abstract class RightTriangle
+public class RightTriangle implements Shape
 {
     // instance variables - replace the example below with your own
     private double base;
@@ -16,12 +16,13 @@ public abstract class RightTriangle
     private int x;
     private int y;
     
-    public RightTriangle(int px, int py, double pbase,double pheight, double pc){
+    public RightTriangle(int px, int py, double pbase,double pheight){
         x = px;
         y = py;
         base = pbase;
         height = pheight;
-        c = pc;
+        c = (base*base) + (height*height);
+        c = Math.sqrt(c);
         ax[0] = x;
         ax[1] = x;
         ax[2] =(int)(base)+x;
