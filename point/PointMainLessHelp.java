@@ -12,29 +12,32 @@ public class PointMainLessHelp {
         int npoints = 0;
         int pointy;
         int pointx;
-        ArrayList point = new ArrayList<Point>();
+        ArrayList<Point> point = new ArrayList<Point>();
         
         Point p1 = new Point(0,0);
         Point p2 = new Point(0,0);
         Point p3 = new Point(11,2);
         
         Scanner input = new Scanner(System.in);
-        DrawingPanel panel  = new DrawingPanel(1000,1000);
+        DrawingPanel panel  = new DrawingPanel(50,50);
         Graphics pen = panel.getGraphics();
-        
+        pen.setColor(Color.BLACK);
         
         System.out.println("how many new points do you want to add");
         npoints = input.nextInt();
         for(int x=0; x<npoints; x++){
-            System.out.println("What is the y coordinate");
-            pointy = input.nextInt();
             System.out.println("What is the x coordinate");
             pointx = input.nextInt();
+            System.out.println("What is the y coordinate");
+            pointy = input.nextInt();            
             point.add(new Point(pointx, pointy));
         }
         System.out.println(point);
+        
             
-           
+        for(int x = 0; x<point.size();x++){
+            point.get(x).drawPoint(pen);
+        }
 
         // print each point and its distance from origin
         System.out.println("p1 is " + p1.toString());

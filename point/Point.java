@@ -1,6 +1,7 @@
  // A Point object represents a pair of (x, y) coordinates.
 // Seventh version: Immutable.
 // Class invariant: x >= 0 && y >= 0.
+import java.awt.*;
 
 public class Point {
     private int x;
@@ -56,6 +57,9 @@ public class Point {
     }
 
     public double getSlope (Point other){
+        if(other.getX()==x){
+            throw new IllegalArgumentException();
+        }
         slope = (double)(other.getY()-y)/(other.getX()-x);
         return slope;
     }
@@ -73,6 +77,10 @@ public class Point {
             System.out.println(getSlope(p1) + " " + getSlope(p2) + "it is not collinear");
             return false;
         }
+    }
+    
+    public void drawPoint(Graphics pen){
+        pen.fillOval(x,y,2,2);
     }
         
        
